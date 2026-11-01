@@ -1,0 +1,172 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0b1020;
+    color: #f8fafc;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 240px minmax(0, 1fr);
+    min-height: 100vh;
+    line-height: 1.5;
+}
+
+.sidebar {
+    background-color: #171f33;
+    padding: 24px 16px;
+}
+
+.sidebar h2 {
+    color: #c4b5fd;
+    margin-bottom: 32px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sidebar a {
+    display: block;
+    color: #cbd5e1;
+    text-decoration: none;
+    padding: 12px 14px;
+    border-radius: 8px;
+}
+
+.sidebar a:hover {
+    background-color: #34345d;
+    color: #ffffff;
+}
+
+main {
+    padding: 32px;
+    min-width: 0;
+}
+
+.statistics {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.total-task,
+.completed-task,
+.pending-task {
+    background-color: #171F33;
+    padding: 24px;
+    border-radius: 12px;
+}
+
+.statistics h3 {
+    color: #94a3b8;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0 0 12px;
+}
+
+.statistics p {
+    color: #f8fafc;
+    font-size: 32px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.today-tasks {
+    background-color: #171F33;
+    padding: 24px;
+    margin-top: 24px;
+    border-radius: 12px;
+}
+
+.today-tasks h3 {
+    font-size: 20px;
+    color: white;
+}
+
+.today-tasks ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.today-tasks li {
+    border-bottom: 1px solid #303950;
+    color: #cbd5e1;
+    padding: 14px 0;
+}
+
+.today-tasks li:last-child {
+    border-bottom: none;
+}
+
+@media (max-width: 768px) {
+    body {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    main {
+        padding: 20px;
+    }
+
+    .statistics {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .statistics>div {
+        min-width: 0;
+        padding: 18px;
+    }
+
+    .statistics h3 {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+    .statistics p {
+        font-size: 26px;
+    }
+}
+
+@media (max-width: 480px) {
+    main {
+        padding: 16px;
+    }
+
+    .statistics>div {
+        padding: 16px;
+    }
+
+    .today-tasks {
+        padding: 16px;
+    }
+}
+.today-tasks label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.today-tasks input[type="checkbox"] {
+    accent-color: #a78bfa;
+    width: 16px;
+    height: 16px;
+}
+
+.sidebar a:focus-visible {
+    outline: 2px solid #c4b5fd;
+    outline-offset: 3px;
+}

@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TaskFlow | Task Manager</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <aside class="sidebar">
+      <nav>
+        <h2>TaskFlow</h2>
+        <ul>
+          <li><a href="#dashboard">Dashboard</a></li>
+          <li><a href="#my-tasks">My Tasks</a></li>
+          <li><a href="#upcoming">Upcoming</a></li>
+          <li><a href="#settings">Settings</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <main id="dashboard">
+      <p>MY WORKSPACE</p>
+      <h1>Dashboard</h1>
+      <p>Stay organized. Get things done.</p>
+      <section class="statistics">
+        <div class="total-task">
+          <h3>Total tasks</h3>
+          <p id="total-count">3</p>
+        </div>
+        <div class="completed-task">
+          <h3>Completed</h3>
+          <p id="completed-count">0</p>
+        </div>
+        <div class="pending-task">
+          <h3>Pending</h3>
+          <p id="pending-count">3</p>
+        </div>
+      </section>
+      <section class="today-tasks" id="my-tasks">
+        <div>
+          <h3>Today's Task</h3>
+
+          <form id="task-form">
+            <input
+              type="text"
+              id="task-input"
+              placeholder="Enter a new task"
+              required
+            />
+            <button type="submit">Add Task</button>
+          </form>
+          <ul>
+            <li>
+              <label>
+                <input type="checkbox" />
+                Finish project design
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" />
+                Practice JavaScript
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" />
+                Review daily goals
+              </label>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
